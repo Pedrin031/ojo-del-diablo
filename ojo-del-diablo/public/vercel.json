@@ -11,7 +11,7 @@
   ],
   "routes": [
     {
-      "src": "/api/rubimind(.*)?",
+      "src": "/api/rubimind",
       "dest": "/api/rubimind.py"
     }
   ]
