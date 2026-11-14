@@ -41,7 +41,8 @@ export default function OjoDelDiablo() {
         image_mime: imageFile?.type || "image/png"
       };
 
-      const res = await fetch('/api/chat', {
+      // CORREÇÃO AQUI: Rota correta para bater com o backend
+      const res = await fetch('/api/rubimind', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
