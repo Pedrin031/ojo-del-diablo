@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "app/page.tsx",
+      "use": "@vercel/next"
+    },
+    {
+      "src": "api/rubimind.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)?",
+      "dest": "/api/rubimind.py"
+    }
+  ]
+}
