@@ -1,27 +1,3 @@
-O erro que você viu é o GitHub Secret Scanning avisando que uma chave real foi exposta no código fonte (rubimind.py). Isso é um risco de segurança, pois qualquer um pode usar sua conta OpenAI.
-
-Vamos resolver isso de forma profissional:
-
-Remover a chave fixa do código.
-Usar Variáveis de Ambiente (que é o padrão da Vercel e do GitHub).
-Corrigir o 404 ajustando as rotas para que o frontend e o backend falem a mesma língua.
-Aqui está a estrutura corrigida e blindada.
-
-📁 1. ESTRUTURA DE ARQUIVOS (Mantenha assim)
-ojo-del-diablo/
-├── api/
-│   └── rubimind.py       # Cérebro (Backend)
-├── app/
-│   └── page.tsx          # Rosto (Frontend)
-├── vercel.json           # Configuração de Rotas
-├── requirements.txt      # Dependências
-└── .gitignore            # Ignora arquivos locais
-🧠 2. api/rubimind.py (Backend Corrigido)
-Mudanças:
-
-Removi a chave fixa.
-Adicionei lógica para buscar a chave nas Environment Variables da Vercel/GitHub.
-Adicionei logs de erro para você saber se a chave está válida.
 import os
 import json
 import base64
